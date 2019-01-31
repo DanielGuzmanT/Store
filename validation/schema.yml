@@ -1,0 +1,70 @@
+---
+/products:
+  post: # Create product
+    type: object
+    properties:
+      code:
+        type: integer
+        minimum: 0
+
+      name:
+        type: string
+        maxLength: 200
+
+      description:
+        type: string
+        maxLength: 250
+
+      price_unit:
+        type: number
+        minimum: 0
+
+      price_pack:
+        type: number
+        minimum: 0
+
+    required:
+      - code
+      - name
+      - description
+      - price_unit
+      - price_pack
+
+
+/products/{code}:
+  patch: # UPDATE
+    type: object
+    properties:
+      code:
+        type: integer
+        minimum: 0
+      price_unit:
+        type: number
+        minimum: 0
+      price_pack:
+        type: number
+        minimum: 0
+    required:
+      - code
+      - price_unit
+      - price_pack
+
+
+  delete: # DELETE
+    type: object
+    properties:
+      code:
+        type: integer
+        minimum: 0
+    required:
+      - code
+
+
+  get: # GET
+    type: object
+    properties:
+      code:
+        type: integer
+        minimum: 0
+    required:
+      - code
