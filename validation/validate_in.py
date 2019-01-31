@@ -5,7 +5,7 @@ from functools import wraps
 import yaml
 
 with open(path.join(path.dirname(__file__), 'schema.yml')) as f:
-    schema = yaml.load(f)
+    schema = yaml.safe_load(f)
 
 
 # REAL VALIDATION
