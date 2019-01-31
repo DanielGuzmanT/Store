@@ -7,7 +7,7 @@ name = "pypi"
 flask = "*"
 sqlalchemy = "*"
 jsonschema = "*"
-pyyaml = ">=4.2b1"
+pyyaml = "==4.2b4"
 
 [dev-packages]
 
